@@ -1,6 +1,6 @@
 ﻿namespace trabalho
 {
-    partial class Form7
+    partial class FormConsultaPedidos
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form7";
+            SuspendLayout();
+            // 
+            // FormConsultaPedidos
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Name = "FormConsultaPedidos";
+            Text = "Consulta Pedidos";
+            ResumeLayout(false);
         }
 
         #endregion

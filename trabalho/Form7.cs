@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace trabalho
 {
-    public partial class Form7: Form
+    public partial class FormConsultaPedidos: System.Windows.Forms.Form
     {
-        public Form7()
+        public FormConsultaPedidos()
         {
             InitializeComponent();
         }

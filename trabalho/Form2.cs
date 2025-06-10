@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace trabalho
 {
-    public partial class Form2: Form
+    public partial class FormPrincipal: System.Windows.Forms.Form
     {
-        public Form2()
+        public FormPrincipal()
         {
             InitializeComponent();
         }
