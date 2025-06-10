@@ -45,7 +45,7 @@
             // 
             // btnEntrar
             // 
-            btnEntrar.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEntrar.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEntrar.Location = new Point(114, 146);
             btnEntrar.Name = "btnEntrar";
             btnEntrar.Size = new Size(139, 60);
