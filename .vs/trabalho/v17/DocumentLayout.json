@@ -1,0 +1,136 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\thiag\\source\\repos\\trabalho\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8C75592C-DA10-4C33-8BB1-27C95DA67D40}|trabalho\\trabalho.csproj|c:\\users\\thiag\\source\\repos\\trabalho\\trabalho\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C75592C-DA10-4C33-8BB1-27C95DA67D40}|trabalho\\trabalho.csproj|solutionrelative:trabalho\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C75592C-DA10-4C33-8BB1-27C95DA67D40}|trabalho\\trabalho.csproj|c:\\users\\thiag\\source\\repos\\trabalho\\trabalho\\form7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C75592C-DA10-4C33-8BB1-27C95DA67D40}|trabalho\\trabalho.csproj|solutionrelative:trabalho\\form7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C75592C-DA10-4C33-8BB1-27C95DA67D40}|trabalho\\trabalho.csproj|c:\\users\\thiag\\source\\repos\\trabalho\\trabalho\\form6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C75592C-DA10-4C33-8BB1-27C95DA67D40}|trabalho\\trabalho.csproj|solutionrelative:trabalho\\form6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C75592C-DA10-4C33-8BB1-27C95DA67D40}|trabalho\\trabalho.csproj|c:\\users\\thiag\\source\\repos\\trabalho\\trabalho\\form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C75592C-DA10-4C33-8BB1-27C95DA67D40}|trabalho\\trabalho.csproj|solutionrelative:trabalho\\form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C75592C-DA10-4C33-8BB1-27C95DA67D40}|trabalho\\trabalho.csproj|c:\\users\\thiag\\source\\repos\\trabalho\\trabalho\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C75592C-DA10-4C33-8BB1-27C95DA67D40}|trabalho\\trabalho.csproj|solutionrelative:trabalho\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C75592C-DA10-4C33-8BB1-27C95DA67D40}|trabalho\\trabalho.csproj|c:\\users\\thiag\\source\\repos\\trabalho\\trabalho\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C75592C-DA10-4C33-8BB1-27C95DA67D40}|trabalho\\trabalho.csproj|solutionrelative:trabalho\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C75592C-DA10-4C33-8BB1-27C95DA67D40}|trabalho\\trabalho.csproj|c:\\users\\thiag\\source\\repos\\trabalho\\trabalho\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8C75592C-DA10-4C33-8BB1-27C95DA67D40}|trabalho\\trabalho.csproj|solutionrelative:trabalho\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form7.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\thiag\\source\\repos\\trabalho\\trabalho\\Form7.cs",
+              "RelativeDocumentMoniker": "trabalho\\Form7.cs",
+              "ToolTip": "C:\\Users\\thiag\\source\\repos\\trabalho\\trabalho\\Form7.cs [Projeto]",
+              "RelativeToolTip": "trabalho\\Form7.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T02:17:53.553Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form6.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\thiag\\source\\repos\\trabalho\\trabalho\\Form6.cs",
+              "RelativeDocumentMoniker": "trabalho\\Form6.cs",
+              "ToolTip": "C:\\Users\\thiag\\source\\repos\\trabalho\\trabalho\\Form6.cs [Projeto]",
+              "RelativeToolTip": "trabalho\\Form6.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T02:17:45.382Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form5.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\thiag\\source\\repos\\trabalho\\trabalho\\Form5.cs",
+              "RelativeDocumentMoniker": "trabalho\\Form5.cs",
+              "ToolTip": "C:\\Users\\thiag\\source\\repos\\trabalho\\trabalho\\Form5.cs [Projeto]",
+              "RelativeToolTip": "trabalho\\Form5.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T02:17:39.309Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form4.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\thiag\\source\\repos\\trabalho\\trabalho\\Form4.cs",
+              "RelativeDocumentMoniker": "trabalho\\Form4.cs",
+              "ToolTip": "C:\\Users\\thiag\\source\\repos\\trabalho\\trabalho\\Form4.cs [Projeto]",
+              "RelativeToolTip": "trabalho\\Form4.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T02:17:31.709Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form3.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\thiag\\source\\repos\\trabalho\\trabalho\\Form3.cs",
+              "RelativeDocumentMoniker": "trabalho\\Form3.cs",
+              "ToolTip": "C:\\Users\\thiag\\source\\repos\\trabalho\\trabalho\\Form3.cs [Projeto]",
+              "RelativeToolTip": "trabalho\\Form3.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T02:17:26.5Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form2.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\thiag\\source\\repos\\trabalho\\trabalho\\Form2.cs",
+              "RelativeDocumentMoniker": "trabalho\\Form2.cs",
+              "ToolTip": "C:\\Users\\thiag\\source\\repos\\trabalho\\trabalho\\Form2.cs [Projeto]",
+              "RelativeToolTip": "trabalho\\Form2.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T02:17:19.729Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\thiag\\source\\repos\\trabalho\\trabalho\\Form1.cs",
+              "RelativeDocumentMoniker": "trabalho\\Form1.cs",
+              "ToolTip": "C:\\Users\\thiag\\source\\repos\\trabalho\\trabalho\\Form1.cs [Projeto]",
+              "RelativeToolTip": "trabalho\\Form1.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T02:06:27.738Z",
+              "EditorCaption": " [Projeto]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
