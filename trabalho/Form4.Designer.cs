@@ -36,6 +36,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Name = "FormCadastroC";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro Clientes";
             ResumeLayout(false);
         }

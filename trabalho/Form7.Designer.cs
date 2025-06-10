@@ -36,6 +36,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Name = "FormConsultaPedidos";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Consulta Pedidos";
             ResumeLayout(false);
         }
