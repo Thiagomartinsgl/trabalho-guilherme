@@ -54,8 +54,8 @@
             button2 = new Button();
             btnSalvar = new Button();
             button4 = new Button();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dgvClientes = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvClientes).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -288,21 +288,21 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
-            // dataGridView1
+            // dgvClientes
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(460, 360);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(196, 69);
-            dataGridView1.TabIndex = 26;
-            dataGridView1.Visible = false;
+            dgvClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvClientes.Location = new Point(460, 360);
+            dgvClientes.Name = "dgvClientes";
+            dgvClientes.Size = new Size(196, 69);
+            dgvClientes.TabIndex = 26;
+            dgvClientes.Visible = false;
             // 
             // FormCadastroC
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(668, 520);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvClientes);
             Controls.Add(button4);
             Controls.Add(btnSalvar);
             Controls.Add(button2);
@@ -333,7 +333,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro Clientes";
             Load += FormCadastroC_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvClientes).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -366,6 +366,6 @@
         private Button button2;
         private Button btnSalvar;
         private Button button4;
-        private DataGridView dataGridView1;
+        private DataGridView dgvClientes;
     }
 }

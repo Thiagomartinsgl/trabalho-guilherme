@@ -32,7 +32,7 @@ namespace trabalho
             {
                 using (StreamWriter sw = new StreamWriter(csvClientes))
                 {
-                    sw.WriteLine("Nome,CPF,Email,CEP,Logradouro,Número,Bairro,Cidade,Estado,Telefone,Whatsapp)");
+                    sw.WriteLine("Nome,CPF,Email,CEP,Logradouro,Número,Bairro,Cidade,Estado,Telefone,Whatsapp");
                 }
             }
         }
@@ -58,7 +58,7 @@ namespace trabalho
                     }
                 }
 
-                //dgvClientes.DataSource = tabela;
+                dgvClientes.DataSource = tabela;
             }
             catch (Exception ex)
             {
@@ -68,22 +68,49 @@ namespace trabalho
         }
         private async Task GetExampleAsync()
         {
-            string Cep = txbCEP.Text.Trim();
+            string cep = txbCEP.Text.Trim().Replace("-", "").Replace(".", "");
+
+            if (cep.Length != 8)
+            {
+                MessageBox.Show("CEP inválido.");
+                return;
+            }
 
             try
             {
-                string url = $"https://viacep.com.br/ws/{Cep}/json/";
+                string url = $"https://viacep.com.br/ws/{cep}/json/";
                 HttpResponseMessage response = await client.GetAsync(url);
                 response.EnsureSuccessStatusCode();
 
                 string responseBody = await response.Content.ReadAsStringAsync();
-                txbCEP.AppendText(responseBody);
+                //MessageBox.Show(responseBody);
 
+                string elogradouro = ExtrairValor(responseBody, "\"logradouro\": \"", "\"");
+                string ebairro = ExtrairValor(responseBody, "\"bairro\": \"", "\"");
+                string ecidade = ExtrairValor(responseBody, "\"localidade\": \"", "\"");
+                string eestado = ExtrairValor(responseBody, "\"uf\": \"", "\"");
+
+                txbLogradouro.Text = elogradouro;
+                txbBairro.Text = ebairro;
+                txbCidade.Text = ecidade;
+                txbEstado.Text = eestado;
             }
             catch (HttpRequestException e)
             {
                 MessageBox.Show("Erro na requisição GET: " + e.Message);
             }
+        }
+        private string ExtrairValor(string texto, string chaveInicio, string chaveFim)
+        {
+            int indiceInicio = texto.IndexOf(chaveInicio);
+            if (indiceInicio == -1) return "";
+
+            indiceInicio += chaveInicio.Length;
+
+            int indiceFim = texto.IndexOf(chaveFim, indiceInicio);
+            if (indiceFim == -1) return "";
+
+            return texto.Substring(indiceInicio, indiceFim - indiceInicio);
         }
 
         private async void button4_Click(object sender, EventArgs e)
@@ -105,7 +132,7 @@ namespace trabalho
             string Estado = txbEstado.Text.Trim();
             string Whatsapp = txbWhatsapp.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(cpf) || string.IsNullOrWhiteSpace(telefone) || string.IsNullOrWhiteSpace(endereco) || 
+            if (string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(cpf) || string.IsNullOrWhiteSpace(telefone) || string.IsNullOrWhiteSpace(endereco) ||
                 string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(CEP) || string.IsNullOrWhiteSpace(Numero) || string.IsNullOrWhiteSpace(Bairro) ||
                 string.IsNullOrWhiteSpace(Cidade) || string.IsNullOrWhiteSpace(Estado) || string.IsNullOrWhiteSpace(Whatsapp))
             {
@@ -117,7 +144,11 @@ namespace trabalho
 
             if (indiceEdicao == -1)
             {
-                if (linhas.Skip(1).Any(l => l.Split(',')[1] == cpf))
+                if (linhas.Skip(1).Any(l =>
+                {
+                    string[] partes = l.Split(',');
+                    return partes.Length > 1 && partes[1] == cpf;
+                }))
                 {
                     MessageBox.Show("Este CPF já está cadastrado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
