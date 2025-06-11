@@ -49,6 +49,7 @@
             button1.TabIndex = 0;
             button1.Text = "SALVAR";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // textBox1
             // 
@@ -123,6 +124,7 @@
             button4.TabIndex = 8;
             button4.Text = "EXCLUIR";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // FormCadastroU
             // 

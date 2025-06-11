@@ -146,6 +146,7 @@
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(250, 23);
             textBox6.TabIndex = 11;
+            textBox6.TextChanged += textBox6_TextChanged;
             // 
             // label6
             // 
@@ -271,6 +272,7 @@
             button3.TabIndex = 24;
             button3.Text = "SALVAR";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // FormCadastroC
             // 
