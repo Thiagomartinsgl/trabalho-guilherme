@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txbUsu = new TextBox();
+            txtUsuario = new TextBox();
             btnEntrar = new Button();
-            txbSen = new TextBox();
+            txtSenha = new TextBox();
             label1 = new Label();
             label2 = new Label();
             SuspendLayout();
             // 
-            // txbUsu
+            // txtUsuario
             // 
-            txbUsu.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txbUsu.Location = new Point(12, 38);
-            txbUsu.Name = "txbUsu";
-            txbUsu.Size = new Size(348, 29);
-            txbUsu.TabIndex = 0;
-            txbUsu.TextAlign = HorizontalAlignment.Center;
+            txtUsuario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUsuario.Location = new Point(12, 38);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(348, 29);
+            txtUsuario.TabIndex = 0;
+            txtUsuario.TextAlign = HorizontalAlignment.Center;
             // 
             // btnEntrar
             // 
@@ -53,15 +53,16 @@
             btnEntrar.TabIndex = 1;
             btnEntrar.Text = "ENTRAR";
             btnEntrar.UseVisualStyleBackColor = true;
+            btnEntrar.Click += btnEntrar_Click;
             // 
-            // txbSen
+            // txtSenha
             // 
-            txbSen.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txbSen.Location = new Point(12, 111);
-            txbSen.Name = "txbSen";
-            txbSen.Size = new Size(348, 29);
-            txbSen.TabIndex = 2;
-            txbSen.TextAlign = HorizontalAlignment.Center;
+            txtSenha.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtSenha.Location = new Point(12, 111);
+            txtSenha.Name = "txtSenha";
+            txtSenha.Size = new Size(348, 29);
+            txtSenha.TabIndex = 2;
+            txtSenha.TextAlign = HorizontalAlignment.Center;
             // 
             // label1
             // 
@@ -90,9 +91,9 @@
             ClientSize = new Size(372, 225);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(txbSen);
+            Controls.Add(txtSenha);
             Controls.Add(btnEntrar);
-            Controls.Add(txbUsu);
+            Controls.Add(txtUsuario);
             Name = "FormLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
@@ -103,9 +104,9 @@
 
         #endregion
 
-        private TextBox txbUsu;
+        private TextBox txtUsuario;
         private Button btnEntrar;
-        private TextBox txbSen;
+        private TextBox txtSenha;
         private Label label1;
         private Label label2;
     }

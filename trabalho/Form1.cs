@@ -4,7 +4,7 @@ namespace trabalho
 {
     public partial class FormLogin : System.Windows.Forms.Form
     {
-        private string csvLogin = "C:/Users/thiag/Documents/csvLogin.txt";
+        private string csvLogin = "C:/Users/thiag/Documents/csvLogin";
 
         public FormLogin()
         {
@@ -27,34 +27,41 @@ namespace trabalho
                 }
             }
         }
-        private void CarregarCsvNoGrid()
+
+        private void btnEntrar_Click(object sender, EventArgs e)
         {
-            try
+            string usuario = txtUsuario.Text.Trim();
+            string senha = txtSenha.Text.Trim();
+
+            if (usuario == "ADMIN" && senha == "123")
             {
-                DataTable tabela = new DataTable();
-                string[] linhas = File.ReadAllLines(caminhoCsv);
+                AbrirFormularioPrincipal();
+                return;
 
-                if (linhas.Length > 0)
+            }
+
+            if (File.Exists(csvLogin))
+            {
+                var linhas = File.ReadAllLines(csvLogin).Skip(1);
+
+                foreach (var linha in linhas)
                 {
-                    string[] colunas = linhas[0].Split(',');
-
-                    foreach (string coluna in colunas)
-                        tabela.Columns.Add(coluna);
-
-                    for (int i = 1; i < linhas.Length; i++)
+                    var dados = linha.Split(',');
+                    if (dados.Length == 2 && dados[0] == usuario && dados[1] == senha)
                     {
-                        string[] dados = linhas[i].Split(',');
-                        tabela.Rows.Add(dados);
+                        AbrirFormularioPrincipal();
+                        return;
                     }
                 }
+            }
 
-                dgvDados.DataSource = tabela;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Erro ao carregar dados: {ex.Message}", "Erro",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            MessageBox.Show("Usuário ou senha inválidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        private void AbrirFormularioPrincipal()
+        {
+            this.Hide();
+            FormPrincipal principal = new FormPrincipal();
+            principal.Show();
         }
     }
 }

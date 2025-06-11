@@ -21,5 +21,29 @@ namespace trabalho
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormCadastroC formClientes = new FormCadastroC();
+            formClientes.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormCadastroP formProdiutos = new FormCadastroP();
+            formProdiutos.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormCadastroPedidos formPedidos = new FormCadastroPedidos();
+            formPedidos.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FormCadastroU formUsuarios = new FormCadastroU();
+            formUsuarios.ShowDialog();
+        }
     }
 }
