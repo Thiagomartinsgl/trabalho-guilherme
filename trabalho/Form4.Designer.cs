@@ -305,6 +305,7 @@
             Name = "FormCadastroC";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro Clientes";
+            Load += FormCadastroC_Load;
             ResumeLayout(false);
             PerformLayout();
         }

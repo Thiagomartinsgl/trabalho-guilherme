@@ -2,7 +2,7 @@ namespace trabalho
 {
     public partial class FormLogin : System.Windows.Forms.Form
     {
-        private string caminhoCSV =
+        private string csvLogin = "C:/Users/thiag/Documents/csvLogin.txt";
 
         public FormLogin()
         {

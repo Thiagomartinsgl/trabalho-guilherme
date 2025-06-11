@@ -104,6 +104,7 @@
             Name = "FormCadastroP";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro Produtos";
+            Load += FormCadastroP_Load;
             ResumeLayout(false);
             PerformLayout();
         }

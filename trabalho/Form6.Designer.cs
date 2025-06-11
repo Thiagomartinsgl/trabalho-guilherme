@@ -174,6 +174,7 @@
             Name = "FormCadastroPedidos";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro Pedidos";
+            Load += FormCadastroPedidos_Load;
             ResumeLayout(false);
             PerformLayout();
         }

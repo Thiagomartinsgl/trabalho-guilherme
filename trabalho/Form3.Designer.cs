@@ -141,6 +141,7 @@
             Name = "FormCadastroU";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro Usuário";
+            Load += FormCadastroU_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

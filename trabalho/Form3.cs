@@ -12,9 +12,16 @@ namespace trabalho
 {
     public partial class FormCadastroU : System.Windows.Forms.Form
     {
+        private string csvUsuario = "C:/Users/thiag/Documents/csvLogin.txt";
+
         public FormCadastroU()
         {
             InitializeComponent();
+        }
+
+        private void FormCadastroU_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

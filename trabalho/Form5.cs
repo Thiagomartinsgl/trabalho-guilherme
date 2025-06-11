@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace trabalho
 {
-    public partial class FormCadastroP: System.Windows.Forms.Form
+    public partial class FormCadastroP : System.Windows.Forms.Form
     {
         public FormCadastroP()
         {
             InitializeComponent();
+        }
+
+        private void FormCadastroP_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

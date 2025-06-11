@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace trabalho
 {
-    public partial class FormCadastroPedidos: System.Windows.Forms.Form
+    public partial class FormCadastroPedidos : System.Windows.Forms.Form
     {
         public FormCadastroPedidos()
         {
             InitializeComponent();
+        }
+
+        private void FormCadastroPedidos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
