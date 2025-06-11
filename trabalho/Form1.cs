@@ -23,7 +23,7 @@ namespace trabalho
             {
                 using (StreamWriter sw = new StreamWriter(csvLogin))
                 {
-                    sw.WriteLine("Usuario,Senha")
+                    sw.WriteLine("Usuario,Senha");
                 }
             }
         }
