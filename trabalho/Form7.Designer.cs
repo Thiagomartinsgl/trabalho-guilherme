@@ -103,6 +103,7 @@
             Name = "FormConsultaPedidos";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Consulta Pedidos";
+            Load += FormConsultaPedidos_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -37,54 +37,12 @@ namespace trabalho
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            string nome = txbNome.Text.Trim();
-            string cpf = mtbCPF.Text.Trim();
-            string telefone = mtbTelefone.Text.Trim();
-            string endereco = txbEndereco.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(cpf) || string.IsNullOrWhiteSpace(telefone) || string.IsNullOrWhiteSpace(endereco))
-            {
-                MessageBox.Show("Preencha todos os campos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            var linhas = File.ReadAllLines(caminhoCsv).ToList();
-
-            if (indiceEdicao == -1)
-            {
-                if (linhas.Skip(1).Any(l => l.Split(',')[1] == cpf))
-                {
-                    MessageBox.Show("Este CPF já está cadastrado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                linhas.Add($"{nome},{cpf},{telefone},{endereco}");
-            }
-            else
-            {
-                linhas[indiceEdicao + 1] = $"{nome},{cpf},{telefone},{endereco}";
-                indiceEdicao = -1;
-                btnSalvar.Text = "Salvar";
-            }
-
-            File.WriteAllLines(caminhoCsv, linhas);
-            MessageBox.Show("Dados salvos com sucesso!");
-
-            txbNome.Clear();
-            mtbCPF.Clear();
-            mtbTelefone.Clear();
-            txbEndereco.Clear();
-
-            CarregarCsvNoGrid();
-        }
         private void CarregarCsvNoGrid()
         {
             try
             {
                 DataTable tabela = new DataTable();
-                string[] linhas = File.ReadAllLines(caminhoCsv);
+                string[] linhas = File.ReadAllLines(csvClientes);
 
                 if (linhas.Length > 0)
                 {
@@ -98,9 +56,9 @@ namespace trabalho
                         string[] dados = linhas[i].Split(',');
                         tabela.Rows.Add(dados);
                     }
-                }ghdfg
+                }
 
-                dgvDados.DataSource = tabela;
+                //dgvClientes.DataSource = tabela;
             }
             catch (Exception ex)
             {
@@ -110,14 +68,17 @@ namespace trabalho
         }
         private async Task GetExampleAsync()
         {
+            string Cep = txbCEP.Text.Trim();
+
             try
             {
-                string url = "https://jsonplaceholder.typicode.com/posts/1";
+                string url = $"https://viacep.com.br/ws/{Cep}/json/";
                 HttpResponseMessage response = await client.GetAsync(url);
                 response.EnsureSuccessStatusCode();
 
                 string responseBody = await response.Content.ReadAsStringAsync();
-                MessageBox.Show("GET Response:\n" + responseBody);
+                txbCEP.AppendText(responseBody);
+
             }
             catch (HttpRequestException e)
             {
@@ -125,9 +86,68 @@ namespace trabalho
             }
         }
 
-        private async void textBox6_TextChanged(object sender, EventArgs e)
+        private async void button4_Click(object sender, EventArgs e)
         {
             await GetExampleAsync();
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            string nome = txbNome.Text.Trim();
+            string cpf = txbCPF.Text.Trim();
+            string telefone = txbTelefone.Text.Trim();
+            string endereco = txbLogradouro.Text.Trim();
+            string Email = txbEmail.Text.Trim();
+            string CEP = txbCEP.Text.Trim();
+            string Numero = txbNumero.Text.Trim();
+            string Bairro = txbBairro.Text.Trim();
+            string Cidade = txbCidade.Text.Trim();
+            string Estado = txbEstado.Text.Trim();
+            string Whatsapp = txbWhatsapp.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(cpf) || string.IsNullOrWhiteSpace(telefone) || string.IsNullOrWhiteSpace(endereco) || 
+                string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(CEP) || string.IsNullOrWhiteSpace(Numero) || string.IsNullOrWhiteSpace(Bairro) ||
+                string.IsNullOrWhiteSpace(Cidade) || string.IsNullOrWhiteSpace(Estado) || string.IsNullOrWhiteSpace(Whatsapp))
+            {
+                MessageBox.Show("Preencha todos os campos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var linhas = File.ReadAllLines(csvClientes).ToList();
+
+            if (indiceEdicao == -1)
+            {
+                if (linhas.Skip(1).Any(l => l.Split(',')[1] == cpf))
+                {
+                    MessageBox.Show("Este CPF já está cadastrado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                linhas.Add($"{nome},{cpf},{telefone},{endereco},{Email},{CEP},{Numero},{Bairro},{Cidade},{Estado},{Whatsapp}");
+            }
+            else
+            {
+                linhas[indiceEdicao + 1] = $"{nome},{cpf},{telefone},{endereco},{Email},{CEP},{Numero},{Bairro},{Cidade},{Estado},{Whatsapp}";
+                indiceEdicao = -1;
+                btnSalvar.Text = "Salvar";
+            }
+
+            File.WriteAllLines(csvClientes, linhas);
+            MessageBox.Show("Dados salvos com sucesso!");
+
+            txbNome.Clear();
+            txbCPF.Clear();
+            txbTelefone.Clear();
+            txbLogradouro.Clear();
+            txbEmail.Clear();
+            txbCEP.Clear();
+            txbNumero.Clear();
+            txbBairro.Clear();
+            txbCidade.Clear();
+            txbEstado.Clear();
+            txbWhatsapp.Clear();
+
+            CarregarCsvNoGrid();
         }
     }
 }

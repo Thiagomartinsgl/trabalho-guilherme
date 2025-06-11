@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace trabalho
 {
-    public partial class FormConsultaPedidos: System.Windows.Forms.Form
+    public partial class FormConsultaPedidos : System.Windows.Forms.Form
     {
         public FormConsultaPedidos()
         {
             InitializeComponent();
+        }
+
+        private void FormConsultaPedidos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
