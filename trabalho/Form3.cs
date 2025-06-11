@@ -72,7 +72,7 @@ namespace trabalho
             txbNome.Clear();
             mtbCPF.Clear();
             mtbTelefone.Clear();
-            txbEndereco.Clear();
+            txbEndereco.Clear();hsdsfdhs
 
             CarregarCsvNoGrid();
         }
