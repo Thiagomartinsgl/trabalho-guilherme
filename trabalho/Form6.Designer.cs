@@ -32,6 +32,14 @@
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             label2 = new Label();
+            textBox3 = new TextBox();
+            textBox4 = new TextBox();
+            comboBox1 = new ComboBox();
+            textBox5 = new TextBox();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -40,9 +48,9 @@
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(57, 21);
+            label1.Size = new Size(38, 21);
             label1.TabIndex = 0;
-            label1.Text = "label1";
+            label1.Text = "CPF";
             // 
             // textBox1
             // 
@@ -67,15 +75,98 @@
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(12, 79);
             label2.Name = "label2";
-            label2.Size = new Size(57, 21);
+            label2.Size = new Size(59, 21);
             label2.TabIndex = 2;
-            label2.Text = "label2";
+            label2.Text = "NOME";
+            // 
+            // textBox3
+            // 
+            textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox3.Location = new Point(12, 425);
+            textBox3.Name = "textBox3";
+            textBox3.ReadOnly = true;
+            textBox3.Size = new Size(178, 29);
+            textBox3.TabIndex = 4;
+            // 
+            // textBox4
+            // 
+            textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox4.Location = new Point(12, 321);
+            textBox4.Name = "textBox4";
+            textBox4.ReadOnly = true;
+            textBox4.Size = new Size(178, 29);
+            textBox4.TabIndex = 5;
+            // 
+            // comboBox1
+            // 
+            comboBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(12, 179);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(178, 29);
+            comboBox1.TabIndex = 6;
+            // 
+            // textBox5
+            // 
+            textBox5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox5.Location = new Point(12, 249);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(178, 29);
+            textBox5.TabIndex = 8;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(12, 225);
+            label3.Name = "label3";
+            label3.Size = new Size(116, 21);
+            label3.TabIndex = 7;
+            label3.Text = "QUANTIDADE";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(12, 155);
+            label4.Name = "label4";
+            label4.Size = new Size(95, 21);
+            label4.TabIndex = 9;
+            label4.Text = "PRODUTOS";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(12, 401);
+            label5.Name = "label5";
+            label5.Size = new Size(120, 21);
+            label5.TabIndex = 10;
+            label5.Text = "TOTAL PEDIDO";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(12, 297);
+            label6.Name = "label6";
+            label6.Size = new Size(61, 21);
+            label6.TabIndex = 11;
+            label6.Text = "VALOR";
             // 
             // FormCadastroPedidos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(205, 495);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(textBox5);
+            Controls.Add(label3);
+            Controls.Add(comboBox1);
+            Controls.Add(textBox4);
+            Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(label2);
             Controls.Add(textBox1);
@@ -93,5 +184,13 @@
         private TextBox textBox1;
         private TextBox textBox2;
         private Label label2;
+        private TextBox textBox3;
+        private TextBox textBox4;
+        private ComboBox comboBox1;
+        private TextBox textBox5;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private Label label6;
     }
 }
