@@ -31,22 +31,23 @@
             txbUsu = new TextBox();
             btnEntrar = new Button();
             txbSen = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
             SuspendLayout();
             // 
             // txbUsu
             // 
             txbUsu.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txbUsu.Location = new Point(12, 28);
+            txbUsu.Location = new Point(12, 38);
             txbUsu.Name = "txbUsu";
             txbUsu.Size = new Size(348, 29);
             txbUsu.TabIndex = 0;
-            txbUsu.Text = "USUÁRIO";
             txbUsu.TextAlign = HorizontalAlignment.Center;
             // 
             // btnEntrar
             // 
             btnEntrar.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEntrar.Location = new Point(114, 146);
+            btnEntrar.Location = new Point(114, 153);
             btnEntrar.Name = "btnEntrar";
             btnEntrar.Size = new Size(139, 60);
             btnEntrar.TabIndex = 1;
@@ -56,18 +57,39 @@
             // txbSen
             // 
             txbSen.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txbSen.Location = new Point(12, 81);
+            txbSen.Location = new Point(12, 111);
             txbSen.Name = "txbSen";
             txbSen.Size = new Size(348, 29);
             txbSen.TabIndex = 2;
-            txbSen.Text = "SENHA";
             txbSen.TextAlign = HorizontalAlignment.Center;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(12, 14);
+            label1.Name = "label1";
+            label1.Size = new Size(73, 21);
+            label1.TabIndex = 3;
+            label1.Text = "Usuário:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(12, 87);
+            label2.Name = "label2";
+            label2.Size = new Size(61, 21);
+            label2.TabIndex = 4;
+            label2.Text = "Senha:";
             // 
             // FormLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(372, 225);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(txbSen);
             Controls.Add(btnEntrar);
             Controls.Add(txbUsu);
@@ -84,5 +106,7 @@
         private TextBox txbUsu;
         private Button btnEntrar;
         private TextBox txbSen;
+        private Label label1;
+        private Label label2;
     }
 }

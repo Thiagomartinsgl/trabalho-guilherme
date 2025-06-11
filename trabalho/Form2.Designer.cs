@@ -86,6 +86,7 @@
             Name = "FormPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Principal";
+            Load += FormPrincipal_Load;
             ResumeLayout(false);
         }
 

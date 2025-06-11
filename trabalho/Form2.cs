@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace trabalho
 {
-    public partial class FormPrincipal: System.Windows.Forms.Form
+    public partial class FormPrincipal : System.Windows.Forms.Form
     {
         public FormPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

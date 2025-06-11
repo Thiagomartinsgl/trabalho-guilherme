@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace trabalho
 {
-    public partial class FormCadastroU: System.Windows.Forms.Form
+    public partial class FormCadastroU : System.Windows.Forms.Form
     {
         public FormCadastroU()
         {
