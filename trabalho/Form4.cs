@@ -98,7 +98,7 @@ namespace trabalho
                         string[] dados = linhas[i].Split(',');
                         tabela.Rows.Add(dados);
                     }
-                }
+                }ghdfg
 
                 dgvDados.DataSource = tabela;
             }
