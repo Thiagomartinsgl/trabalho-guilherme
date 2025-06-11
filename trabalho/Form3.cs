@@ -12,7 +12,7 @@ namespace trabalho
 {
     public partial class FormCadastroU : System.Windows.Forms.Form
     {
-        private string csvUsuario = "C:/Users/thiag/Documents/csvLogin.txt";
+        private string csvUsuario = "C:/Users/thiag/Documents/csvUsuario";
         private int indiceEdicao = -1;
 
         public FormCadastroU()
@@ -38,16 +38,16 @@ namespace trabalho
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string nome = txbNome.Text.Trim();
-            string cpf = mtbCPF.Text.Trim();
+            string nome = txbUsuario.Text.Trim();
+            string cpf = txbSenha.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(cpf) || string.IsNullOrWhiteSpace(telefone) || string.IsNullOrWhiteSpace(endereco))
+            if (string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(cpf))
             {
                 MessageBox.Show("Preencha todos os campos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            var linhas = File.ReadAllLines(caminhoCsv).ToList();
+            var linhas = File.ReadAllLines(csvUsuario).ToList();
 
             if (indiceEdicao == -1)
             {
@@ -57,38 +57,36 @@ namespace trabalho
                     return;
                 }
 
-                linhas.Add($"{nome},{cpf},{telefone},{endereco}");
+                linhas.Add($"{nome},{cpf}");
             }
             else
             {
-                linhas[indiceEdicao + 1] = $"{nome},{cpf},{telefone},{endereco}";
+                linhas[indiceEdicao + 1] = $"{nome},{cpf}";
                 indiceEdicao = -1;
                 btnSalvar.Text = "Salvar";
             }
 
-            File.WriteAllLines(caminhoCsv, linhas);
+            File.WriteAllLines(csvUsuario, linhas);
             MessageBox.Show("Dados salvos com sucesso!");
 
-            txbNome.Clear();
-            mtbCPF.Clear();
-            mtbTelefone.Clear();
-            txbEndereco.Clear();
+            txbUsuario.Clear();
+            txbSenha.Clear();
 
             CarregarCsvNoGrid();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (dgvDados.SelectedRows.Count == 0)
+            if (dgvUsuario.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Selecione uma linha para excluir.");
                 return;
             }
 
-            int rowIndex = dgvDados.SelectedRows[0].Index;
-            var linhas = File.ReadAllLines(caminhoCsv).ToList();
+            int rowIndex = dgvUsuario.SelectedRows[0].Index;
+            var linhas = File.ReadAllLines(csvUsuario).ToList();
             linhas.RemoveAt(rowIndex + 1);
-            File.WriteAllLines(caminhoCsv, linhas);
+            File.WriteAllLines(csvUsuario, linhas);
             CarregarCsvNoGrid();
         }
         private void CarregarCsvNoGrid()
@@ -96,7 +94,7 @@ namespace trabalho
             try
             {
                 DataTable tabela = new DataTable();
-                string[] linhas = File.ReadAllLines(caminhoCsv);
+                string[] linhas = File.ReadAllLines(csvUsuario);
 
                 if (linhas.Length > 0)
                 {
@@ -112,7 +110,7 @@ namespace trabalho
                     }
                 }
 
-                dgvDados.DataSource = tabela;
+                dgvUsuario.DataSource = tabela;
             }
             catch (Exception ex)
             {

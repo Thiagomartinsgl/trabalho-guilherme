@@ -13,7 +13,7 @@ namespace trabalho
     public partial class FormCadastroC : System.Windows.Forms.Form
     {
         private static readonly HttpClient client = new HttpClient();
-        private string csvClientes = "C:/Users/thiag/Documents/csvLogin.txt";
+        private string csvClientes = "C:/Users/thiag/Documents/csvClientes";
         private int indiceEdicao = -1;
 
         public FormCadastroC()

@@ -28,52 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            textBox1 = new TextBox();
-            dataGridView1 = new DataGridView();
-            textBox2 = new TextBox();
+            btnSalvar = new Button();
+            txbUsuario = new TextBox();
+            dgvUsuario = new DataGridView();
+            txbSenha = new TextBox();
             label1 = new Label();
             label2 = new Label();
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvUsuario).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // btnSalvar
             // 
-            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(288, 517);
-            button1.Name = "button1";
-            button1.Size = new Size(135, 57);
-            button1.TabIndex = 0;
-            button1.Text = "SALVAR";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnSalvar.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSalvar.Location = new Point(288, 517);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(135, 57);
+            btnSalvar.TabIndex = 0;
+            btnSalvar.Text = "SALVAR";
+            btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += button1_Click;
             // 
-            // textBox1
+            // txbUsuario
             // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(12, 41);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(411, 29);
-            textBox1.TabIndex = 1;
+            txbUsuario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txbUsuario.Location = new Point(12, 41);
+            txbUsuario.Name = "txbUsuario";
+            txbUsuario.Size = new Size(411, 29);
+            txbUsuario.TabIndex = 1;
             // 
-            // dataGridView1
+            // dgvUsuario
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(10, 275);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(413, 235);
-            dataGridView1.TabIndex = 2;
+            dgvUsuario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvUsuario.Location = new Point(10, 275);
+            dgvUsuario.Name = "dgvUsuario";
+            dgvUsuario.Size = new Size(413, 235);
+            dgvUsuario.TabIndex = 2;
             // 
-            // textBox2
+            // txbSenha
             // 
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(12, 115);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(411, 29);
-            textBox2.TabIndex = 3;
+            txbSenha.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txbSenha.Location = new Point(12, 115);
+            txbSenha.Name = "txbSenha";
+            txbSenha.Size = new Size(411, 29);
+            txbSenha.TabIndex = 3;
             // 
             // label1
             // 
@@ -136,25 +136,25 @@
             Controls.Add(button2);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox2);
-            Controls.Add(dataGridView1);
-            Controls.Add(textBox1);
-            Controls.Add(button1);
+            Controls.Add(txbSenha);
+            Controls.Add(dgvUsuario);
+            Controls.Add(txbUsuario);
+            Controls.Add(btnSalvar);
             Name = "FormCadastroU";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro Usuário";
             Load += FormCadastroU_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvUsuario).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
-        private TextBox textBox1;
-        private DataGridView dataGridView1;
-        private TextBox textBox2;
+        private Button btnSalvar;
+        private TextBox txbUsuario;
+        private DataGridView dgvUsuario;
+        private TextBox txbSenha;
         private Label label1;
         private Label label2;
         private Button button2;
