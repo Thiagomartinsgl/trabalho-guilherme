@@ -139,5 +139,5 @@ namespace trabalho
 
             txbTotal.Text = $"Total: R${total:0.00}";
         }
-    }fdsg
+    }
 }
