@@ -65,7 +65,7 @@ namespace trabalho
             }
 
             string[] linhasPedidos = File.ReadAllLines(csvPedidos);
-            foreach (var linha in linhasPedidos.Skip(1))
+            foreach (var linha in linhasPedidos.Skip(1))//95
             {
                 string[] partes;
                 partes = linha.Split(',');
