@@ -17,7 +17,7 @@ namespace trabalho
 
         public FormConsultaPedidos()
         {
-            InitializeComponent();//85
+            InitializeComponent();
         }
 
         private void FormConsultaPedidos_Load(object sender, EventArgs e)
