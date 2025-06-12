@@ -38,7 +38,7 @@ namespace trabalho
             }
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e) //hghh
+        private void btnSalvar_Click(object sender, EventArgs e) //hghhfvd
         {
             string nome = cbxProduto.Text;
             decimal preco = Convert.ToDecimal(txbValor.Text);
