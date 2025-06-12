@@ -117,7 +117,7 @@
             // btnEditar
             // 
             btnEditar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            btnEditar.Location = new Point(339, 273);
+            btnEditar.Location = new Point(324, 273);
             btnEditar.Name = "btnEditar";
             btnEditar.Size = new Size(118, 56);
             btnEditar.TabIndex = 8;
