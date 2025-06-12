@@ -28,41 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox2 = new TextBox();
-            label2 = new Label();
-            textBox1 = new TextBox();
+            lblNome = new Label();
+            txbCPF = new TextBox();
             label1 = new Label();
-            listView1 = new ListView();
-            listView2 = new ListView();
             button1 = new Button();
+            ltvPedidos = new ListView();
+            ltvItens = new ListView();
             SuspendLayout();
             // 
-            // textBox2
+            // lblNome
             // 
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(12, 110);
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.Size = new Size(178, 29);
-            textBox2.TabIndex = 7;
+            lblNome.AutoSize = true;
+            lblNome.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNome.Location = new Point(12, 93);
+            lblNome.Name = "lblNome";
+            lblNome.Size = new Size(59, 21);
+            lblNome.TabIndex = 6;
+            lblNome.Text = "NOME";
             // 
-            // label2
+            // txbCPF
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(12, 86);
-            label2.Name = "label2";
-            label2.Size = new Size(59, 21);
-            label2.TabIndex = 6;
-            label2.Text = "NOME";
-            // 
-            // textBox1
-            // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(12, 40);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(178, 29);
-            textBox1.TabIndex = 5;
+            txbCPF.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txbCPF.Location = new Point(12, 40);
+            txbCPF.Name = "txbCPF";
+            txbCPF.Size = new Size(178, 29);
+            txbCPF.TabIndex = 5;
             // 
             // label1
             // 
@@ -74,43 +64,46 @@
             label1.TabIndex = 4;
             label1.Text = "CPF";
             // 
-            // listView1
-            // 
-            listView1.Location = new Point(12, 160);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(368, 151);
-            listView1.TabIndex = 8;
-            listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // listView2
-            // 
-            listView2.Location = new Point(12, 317);
-            listView2.Name = "listView2";
-            listView2.Size = new Size(368, 151);
-            listView2.TabIndex = 9;
-            listView2.UseCompatibleStateImageBehavior = false;
-            // 
             // button1
             // 
             button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(219, 86);
+            button1.Location = new Point(219, 16);
             button1.Name = "button1";
             button1.Size = new Size(161, 53);
             button1.TabIndex = 10;
             button1.Text = "BUSCAR";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // ltvPedidos
+            // 
+            ltvPedidos.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ltvPedidos.Location = new Point(12, 138);
+            ltvPedidos.Name = "ltvPedidos";
+            ltvPedidos.Size = new Size(368, 151);
+            ltvPedidos.TabIndex = 11;
+            ltvPedidos.UseCompatibleStateImageBehavior = false;
+            ltvPedidos.SelectedIndexChanged += ltvPedidos_SelectedIndexChanged;
+            // 
+            // ltvItens
+            // 
+            ltvItens.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ltvItens.Location = new Point(12, 295);
+            ltvItens.Name = "ltvItens";
+            ltvItens.Size = new Size(368, 151);
+            ltvItens.TabIndex = 12;
+            ltvItens.UseCompatibleStateImageBehavior = false;
             // 
             // FormConsultaPedidos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(395, 474);
+            ClientSize = new Size(395, 467);
+            Controls.Add(ltvItens);
+            Controls.Add(ltvPedidos);
             Controls.Add(button1);
-            Controls.Add(listView2);
-            Controls.Add(listView1);
-            Controls.Add(textBox2);
-            Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(lblNome);
+            Controls.Add(txbCPF);
             Controls.Add(label1);
             Name = "FormConsultaPedidos";
             StartPosition = FormStartPosition.CenterScreen;
@@ -122,12 +115,12 @@
 
         #endregion
 
-        private TextBox textBox2;
-        private Label label2;
-        private TextBox textBox1;
+        private TextBox txbNome;
+        private Label lblNome;
+        private TextBox txbCPF;
         private Label label1;
-        private ListView listView1;
-        private ListView listView2;
         private Button button1;
+        private ListView ltvPedidos;
+        private ListView ltvItens;
     }
 }
