@@ -67,7 +67,7 @@
             // txbNome
             // 
             txbNome.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txbNome.Location = new Point(12, 103);
+            txbNome.Location = new Point(12, 163);
             txbNome.Name = "txbNome";
             txbNome.ReadOnly = true;
             txbNome.Size = new Size(233, 29);
@@ -77,7 +77,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(12, 79);
+            label2.Location = new Point(12, 139);
             label2.Name = "label2";
             label2.Size = new Size(59, 21);
             label2.TabIndex = 2;
@@ -86,7 +86,7 @@
             // txbTotal
             // 
             txbTotal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txbTotal.Location = new Point(12, 397);
+            txbTotal.Location = new Point(12, 457);
             txbTotal.Name = "txbTotal";
             txbTotal.ReadOnly = true;
             txbTotal.Size = new Size(233, 29);
@@ -95,7 +95,7 @@
             // txbValor
             // 
             txbValor.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txbValor.Location = new Point(12, 316);
+            txbValor.Location = new Point(12, 376);
             txbValor.Name = "txbValor";
             txbValor.ReadOnly = true;
             txbValor.Size = new Size(233, 29);
@@ -106,7 +106,7 @@
             cbxProduto.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxProduto.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cbxProduto.FormattingEnabled = true;
-            cbxProduto.Location = new Point(12, 179);
+            cbxProduto.Location = new Point(12, 239);
             cbxProduto.Name = "cbxProduto";
             cbxProduto.Size = new Size(233, 29);
             cbxProduto.TabIndex = 6;
@@ -115,7 +115,7 @@
             // txbQuantidade
             // 
             txbQuantidade.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txbQuantidade.Location = new Point(12, 249);
+            txbQuantidade.Location = new Point(12, 309);
             txbQuantidade.Name = "txbQuantidade";
             txbQuantidade.Size = new Size(233, 29);
             txbQuantidade.TabIndex = 8;
@@ -124,7 +124,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(12, 225);
+            label3.Location = new Point(12, 285);
             label3.Name = "label3";
             label3.Size = new Size(116, 21);
             label3.TabIndex = 7;
@@ -134,7 +134,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(12, 155);
+            label4.Location = new Point(12, 215);
             label4.Name = "label4";
             label4.Size = new Size(95, 21);
             label4.TabIndex = 9;
@@ -144,7 +144,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(12, 373);
+            label5.Location = new Point(12, 433);
             label5.Name = "label5";
             label5.Size = new Size(120, 21);
             label5.TabIndex = 10;
@@ -154,7 +154,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(12, 292);
+            label6.Location = new Point(12, 352);
             label6.Name = "label6";
             label6.Size = new Size(141, 21);
             label6.TabIndex = 11;
@@ -163,7 +163,7 @@
             // btnSalvar
             // 
             btnSalvar.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSalvar.Location = new Point(12, 592);
+            btnSalvar.Location = new Point(12, 652);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(116, 52);
             btnSalvar.TabIndex = 13;
@@ -174,7 +174,7 @@
             // btnExcluir
             // 
             btnExcluir.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnExcluir.Location = new Point(129, 592);
+            btnExcluir.Location = new Point(129, 652);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(116, 52);
             btnExcluir.TabIndex = 14;
@@ -186,7 +186,7 @@
             // 
             lbProdutos.FormattingEnabled = true;
             lbProdutos.ItemHeight = 15;
-            lbProdutos.Location = new Point(12, 432);
+            lbProdutos.Location = new Point(12, 492);
             lbProdutos.Name = "lbProdutos";
             lbProdutos.Size = new Size(233, 154);
             lbProdutos.TabIndex = 15;
@@ -194,9 +194,9 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(261, 56);
+            button1.Location = new Point(12, 77);
             button1.Name = "button1";
-            button1.Size = new Size(104, 44);
+            button1.Size = new Size(233, 44);
             button1.TabIndex = 16;
             button1.Text = "BUSCAR CLIENTE";
             button1.UseVisualStyleBackColor = true;
@@ -206,7 +206,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(377, 771);
+            ClientSize = new Size(265, 722);
             Controls.Add(button1);
             Controls.Add(lbProdutos);
             Controls.Add(btnExcluir);
