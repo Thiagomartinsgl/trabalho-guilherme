@@ -20,7 +20,7 @@ namespace trabalho
         {
             InitializeComponent();
             InicializarCsvSeNecessario();
-            usuarioLogado = usuario;FDSGBVDF
+            usuarioLogado = usuario;
         }
 
         private void FormCadastroU_Load(object sender, EventArgs e)
