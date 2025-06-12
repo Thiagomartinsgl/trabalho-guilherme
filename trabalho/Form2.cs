@@ -48,5 +48,11 @@ namespace trabalho
             FormCadastroU formUsuarios = new FormCadastroU(usuarioLogado);
             formUsuarios.ShowDialog();
         }
+
+        private void btnConsulta_Click(object sender, EventArgs e)
+        {
+            FormConsultaPedidos formUsuarios = new FormConsultaPedidos();
+            formUsuarios.ShowDialog();
+        }
     }
 }

@@ -33,7 +33,7 @@ namespace trabalho
             string usuario = txtUsuario.Text.Trim();
             string senha = txtSenha.Text.Trim();
 
-            if (usuario == "ADMIN" && senha == "123")//
+            if (usuario == "ADMIN" && senha == "123")
             {
                 AbrirFormularioPrincipal(usuario);
                 return;

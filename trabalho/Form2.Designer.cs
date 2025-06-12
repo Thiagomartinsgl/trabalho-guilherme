@@ -32,6 +32,7 @@
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
+            btnConsulta = new Button();
             SuspendLayout();
             // 
             // button1
@@ -78,11 +79,23 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
+            // btnConsulta
+            // 
+            btnConsulta.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
+            btnConsulta.Location = new Point(25, 361);
+            btnConsulta.Name = "btnConsulta";
+            btnConsulta.Size = new Size(182, 66);
+            btnConsulta.TabIndex = 4;
+            btnConsulta.Text = "CONSULTA DE PEDIDOS";
+            btnConsulta.UseVisualStyleBackColor = true;
+            btnConsulta.Click += btnConsulta_Click;
+            // 
             // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(235, 362);
+            ClientSize = new Size(235, 439);
+            Controls.Add(btnConsulta);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -100,5 +113,6 @@
         private Button button2;
         private Button button3;
         private Button button4;
+        private Button btnConsulta;
     }
 }
