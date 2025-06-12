@@ -57,8 +57,6 @@ namespace trabalho
                         tabela.Rows.Add(dados);
                     }
                 }
-
-                dgvClientes.DataSource = tabela;
             }
             catch (Exception ex)
             {

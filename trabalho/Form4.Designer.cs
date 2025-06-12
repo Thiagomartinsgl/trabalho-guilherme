@@ -50,12 +50,8 @@
             label10 = new Label();
             txbEstado = new TextBox();
             label11 = new Label();
-            button1 = new Button();
-            button2 = new Button();
             btnSalvar = new Button();
             button4 = new Button();
-            dgvClientes = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dgvClientes).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -245,30 +241,10 @@
             label11.TabIndex = 20;
             label11.Text = "Estado";
             // 
-            // button1
-            // 
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(12, 450);
-            button1.Name = "button1";
-            button1.Size = new Size(196, 58);
-            button1.TabIndex = 22;
-            button1.Text = "CADRASTAR";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(237, 450);
-            button2.Name = "button2";
-            button2.Size = new Size(196, 58);
-            button2.TabIndex = 23;
-            button2.Text = "EDITAR";
-            button2.UseVisualStyleBackColor = true;
-            // 
             // btnSalvar
             // 
             btnSalvar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSalvar.Location = new Point(460, 450);
+            btnSalvar.Location = new Point(460, 371);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(196, 58);
             btnSalvar.TabIndex = 24;
@@ -288,25 +264,13 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
-            // dgvClientes
-            // 
-            dgvClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvClientes.Location = new Point(460, 360);
-            dgvClientes.Name = "dgvClientes";
-            dgvClientes.Size = new Size(196, 69);
-            dgvClientes.TabIndex = 26;
-            dgvClientes.Visible = false;
-            // 
             // FormCadastroC
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(668, 520);
-            Controls.Add(dgvClientes);
+            ClientSize = new Size(668, 444);
             Controls.Add(button4);
             Controls.Add(btnSalvar);
-            Controls.Add(button2);
-            Controls.Add(button1);
             Controls.Add(txbEstado);
             Controls.Add(label11);
             Controls.Add(txbCidade);
@@ -333,7 +297,6 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro Clientes";
             Load += FormCadastroC_Load;
-            ((System.ComponentModel.ISupportInitialize)dgvClientes).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -362,10 +325,7 @@
         private Label label10;
         private TextBox txbEstado;
         private Label label11;
-        private Button button1;
-        private Button button2;
         private Button btnSalvar;
         private Button button4;
-        private DataGridView dgvClientes;
     }
 }

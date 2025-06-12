@@ -12,7 +12,7 @@ namespace trabalho
 {
     public partial class FormCadastroU : System.Windows.Forms.Form
     {
-        private string csvUsuario = "C:/Users/thiag/Documents/csvUsuario";
+        private string csvUsuario = "C:/Users/thiag/Documents/csvLogin";
         private int indiceEdicao = -1;
 
         public FormCadastroU()
