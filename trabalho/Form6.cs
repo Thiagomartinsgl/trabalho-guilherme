@@ -139,5 +139,47 @@ namespace trabalho
 
             txbTotal.Text = $"Total: R${total:0.00}";
         }
+
+        private void btnFinalizar_Click(object sender, EventArgs e)
+        {
+            string cpf = txbCPF.Text.Trim();
+            string descricao = txbDescricao.Text.Trim();
+            string total = txbTotal.Text.Replace("Total: ", "").Trim();
+            string caminhoPedidos = "C:/Users/thiag/Documents/csvPedidos";
+
+            if (string.IsNullOrWhiteSpace(cpf) || string.IsNullOrWhiteSpace(descricao) || lbProdutos.Items.Count == 0)
+            {
+                MessageBox.Show("Preencha o CPF, a descrição do pedido e adicione pelo menos um produto.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            List<string> itens = new List<string>();
+            foreach (var item in lbProdutos.Items)
+            {
+                itens.Add(item.ToString());
+            }
+
+            string linhaProdutos = string.Join(" | ", itens);
+
+
+            if (!File.Exists(caminhoPedidos))
+            {
+                File.WriteAllText(caminhoPedidos, "Descricao,CPF,Itens,Total\n");
+            }
+
+            using (StreamWriter sw = new StreamWriter(caminhoPedidos, true))
+            {
+                sw.WriteLine($"{descricao},{cpf},\"{linhaProdutos}\",{total}");
+            }
+
+            MessageBox.Show("Pedido finalizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            txbCPF.Clear();
+            txbDescricao.Clear();
+            lbProdutos.Items.Clear();
+            txbNome.Clear();
+            txbValor.Clear();
+            txbTotal.Text = "Total: R$0,00";
+        }
     }
 }
