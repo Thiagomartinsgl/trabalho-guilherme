@@ -29,11 +29,16 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txbProduto = new TextBox();
+            txbPreco = new TextBox();
             label2 = new Label();
-            textBox3 = new TextBox();
+            txbDes = new TextBox();
             label3 = new Label();
+            dgvProdutos = new DataGridView();
+            btnCadastrar = new Button();
+            btnEditar = new Button();
+            btnExcluir = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgvProdutos).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -42,25 +47,25 @@
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(57, 21);
+            label1.Size = new Size(86, 21);
             label1.TabIndex = 0;
-            label1.Text = "label1";
+            label1.Text = "PRODUTO";
             // 
-            // textBox1
+            // txbProduto
             // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(12, 33);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(225, 29);
-            textBox1.TabIndex = 1;
+            txbProduto.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txbProduto.Location = new Point(12, 33);
+            txbProduto.Name = "txbProduto";
+            txbProduto.Size = new Size(225, 29);
+            txbProduto.TabIndex = 1;
             // 
-            // textBox2
+            // txbPreco
             // 
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(257, 33);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 29);
-            textBox2.TabIndex = 3;
+            txbPreco.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txbPreco.Location = new Point(257, 33);
+            txbPreco.Name = "txbPreco";
+            txbPreco.Size = new Size(125, 29);
+            txbPreco.TabIndex = 3;
             // 
             // label2
             // 
@@ -68,17 +73,17 @@
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(257, 9);
             label2.Name = "label2";
-            label2.Size = new Size(57, 21);
+            label2.Size = new Size(61, 21);
             label2.TabIndex = 2;
-            label2.Text = "label2";
+            label2.Text = "PREÇO";
             // 
-            // textBox3
+            // txbDes
             // 
-            textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(405, 33);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(383, 29);
-            textBox3.TabIndex = 5;
+            txbDes.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txbDes.Location = new Point(405, 33);
+            txbDes.Name = "txbDes";
+            txbDes.Size = new Size(383, 29);
+            txbDes.TabIndex = 5;
             // 
             // label3
             // 
@@ -86,25 +91,71 @@
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(405, 9);
             label3.Name = "label3";
-            label3.Size = new Size(57, 21);
+            label3.Size = new Size(98, 21);
             label3.TabIndex = 4;
-            label3.Text = "label3";
+            label3.Text = "DESCRIÇÃO";
+            // 
+            // dgvProdutos
+            // 
+            dgvProdutos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvProdutos.Location = new Point(12, 81);
+            dgvProdutos.Name = "dgvProdutos";
+            dgvProdutos.Size = new Size(776, 174);
+            dgvProdutos.TabIndex = 6;
+            // 
+            // btnCadastrar
+            // 
+            btnCadastrar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnCadastrar.Location = new Point(12, 273);
+            btnCadastrar.Name = "btnCadastrar";
+            btnCadastrar.Size = new Size(118, 56);
+            btnCadastrar.TabIndex = 7;
+            btnCadastrar.Text = "SALVAR";
+            btnCadastrar.UseVisualStyleBackColor = true;
+            btnCadastrar.Click += btnCadastrar_Click;
+            // 
+            // btnEditar
+            // 
+            btnEditar.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnEditar.Location = new Point(339, 273);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(118, 56);
+            btnEditar.TabIndex = 8;
+            btnEditar.Text = "EDITAR";
+            btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
+            // 
+            // btnExcluir
+            // 
+            btnExcluir.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnExcluir.Location = new Point(670, 273);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(118, 56);
+            btnExcluir.TabIndex = 9;
+            btnExcluir.Text = "EXCLUIR";
+            btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Click += btnExcluir_Click;
             // 
             // FormCadastroP
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 209);
-            Controls.Add(textBox3);
+            ClientSize = new Size(800, 341);
+            Controls.Add(btnExcluir);
+            Controls.Add(btnEditar);
+            Controls.Add(btnCadastrar);
+            Controls.Add(dgvProdutos);
+            Controls.Add(txbDes);
             Controls.Add(label3);
-            Controls.Add(textBox2);
+            Controls.Add(txbPreco);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(txbProduto);
             Controls.Add(label1);
             Name = "FormCadastroP";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro Produtos";
             Load += FormCadastroP_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvProdutos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -112,10 +163,14 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txbProduto;
+        private TextBox txbPreco;
         private Label label2;
-        private TextBox textBox3;
+        private TextBox txbDes;
         private Label label3;
+        private DataGridView dgvProdutos;
+        private Button btnCadastrar;
+        private Button btnEditar;
+        private Button btnExcluir;
     }
 }

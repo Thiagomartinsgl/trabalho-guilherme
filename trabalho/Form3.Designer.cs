@@ -43,7 +43,7 @@
             // btnSalvar
             // 
             btnSalvar.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSalvar.Location = new Point(141, 526);
+            btnSalvar.Location = new Point(151, 526);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(135, 57);
             btnSalvar.TabIndex = 0;
@@ -98,7 +98,7 @@
             // btnCadastrar
             // 
             btnCadastrar.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCadastrar.Location = new Point(12, 182);
+            btnCadastrar.Location = new Point(12, 169);
             btnCadastrar.Name = "btnCadastrar";
             btnCadastrar.Size = new Size(135, 57);
             btnCadastrar.TabIndex = 7;
@@ -109,7 +109,7 @@
             // btnExcluir
             // 
             btnExcluir.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnExcluir.Location = new Point(288, 182);
+            btnExcluir.Location = new Point(288, 169);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(135, 57);
             btnExcluir.TabIndex = 8;

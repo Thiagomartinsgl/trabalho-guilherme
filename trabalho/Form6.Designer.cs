@@ -40,6 +40,10 @@
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
+            dataGridView1 = new DataGridView();
+            btnSalvar = new Button();
+            btnExcluir = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -57,7 +61,7 @@
             textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox1.Location = new Point(12, 33);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(178, 29);
+            textBox1.Size = new Size(233, 29);
             textBox1.TabIndex = 1;
             // 
             // textBox2
@@ -66,7 +70,7 @@
             textBox2.Location = new Point(12, 103);
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
-            textBox2.Size = new Size(178, 29);
+            textBox2.Size = new Size(233, 29);
             textBox2.TabIndex = 3;
             // 
             // label2
@@ -82,19 +86,19 @@
             // textBox3
             // 
             textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(12, 425);
+            textBox3.Location = new Point(12, 397);
             textBox3.Name = "textBox3";
             textBox3.ReadOnly = true;
-            textBox3.Size = new Size(178, 29);
+            textBox3.Size = new Size(233, 29);
             textBox3.TabIndex = 4;
             // 
             // textBox4
             // 
             textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox4.Location = new Point(12, 321);
+            textBox4.Location = new Point(12, 316);
             textBox4.Name = "textBox4";
             textBox4.ReadOnly = true;
-            textBox4.Size = new Size(178, 29);
+            textBox4.Size = new Size(233, 29);
             textBox4.TabIndex = 5;
             // 
             // comboBox1
@@ -103,7 +107,7 @@
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(12, 179);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(178, 29);
+            comboBox1.Size = new Size(233, 29);
             comboBox1.TabIndex = 6;
             // 
             // textBox5
@@ -111,7 +115,7 @@
             textBox5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox5.Location = new Point(12, 249);
             textBox5.Name = "textBox5";
-            textBox5.Size = new Size(178, 29);
+            textBox5.Size = new Size(233, 29);
             textBox5.TabIndex = 8;
             // 
             // label3
@@ -138,7 +142,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(12, 401);
+            label5.Location = new Point(12, 373);
             label5.Name = "label5";
             label5.Size = new Size(120, 21);
             label5.TabIndex = 10;
@@ -148,17 +152,48 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(12, 297);
+            label6.Location = new Point(12, 292);
             label6.Name = "label6";
             label6.Size = new Size(61, 21);
             label6.TabIndex = 11;
             label6.Text = "VALOR";
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(12, 432);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(233, 142);
+            dataGridView1.TabIndex = 12;
+            // 
+            // btnSalvar
+            // 
+            btnSalvar.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSalvar.Location = new Point(12, 592);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Size = new Size(116, 52);
+            btnSalvar.TabIndex = 13;
+            btnSalvar.Text = "SALVAR";
+            btnSalvar.UseVisualStyleBackColor = true;
+            // 
+            // btnExcluir
+            // 
+            btnExcluir.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnExcluir.Location = new Point(129, 592);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(116, 52);
+            btnExcluir.TabIndex = 14;
+            btnExcluir.Text = "EXCLUIR";
+            btnExcluir.UseVisualStyleBackColor = true;
+            // 
             // FormCadastroPedidos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(205, 495);
+            ClientSize = new Size(257, 656);
+            Controls.Add(btnExcluir);
+            Controls.Add(btnSalvar);
+            Controls.Add(dataGridView1);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -175,6 +210,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro Pedidos";
             Load += FormCadastroPedidos_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -193,5 +229,8 @@
         private Label label4;
         private Label label5;
         private Label label6;
+        private DataGridView dataGridView1;
+        private Button btnSalvar;
+        private Button btnExcluir;
     }
 }

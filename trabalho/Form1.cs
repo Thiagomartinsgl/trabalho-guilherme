@@ -59,7 +59,6 @@ namespace trabalho
         }
         private void AbrirFormularioPrincipal(string usuario)
         {
-            this.Hide();
             FormPrincipal principal = new FormPrincipal(usuario);
             principal.Show();
         }
