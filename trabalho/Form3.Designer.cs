@@ -43,7 +43,7 @@
             // btnSalvar
             // 
             btnSalvar.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSalvar.Location = new Point(145, 526);
+            btnSalvar.Location = new Point(141, 526);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(135, 57);
             btnSalvar.TabIndex = 0;
