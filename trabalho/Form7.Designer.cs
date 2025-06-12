@@ -34,6 +34,7 @@
             label1 = new Label();
             listView1 = new ListView();
             listView2 = new ListView();
+            button1 = new Button();
             SuspendLayout();
             // 
             // textBox2
@@ -89,11 +90,22 @@
             listView2.TabIndex = 9;
             listView2.UseCompatibleStateImageBehavior = false;
             // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Location = new Point(219, 86);
+            button1.Name = "button1";
+            button1.Size = new Size(161, 53);
+            button1.TabIndex = 10;
+            button1.Text = "BUSCAR";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // FormConsultaPedidos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(395, 474);
+            Controls.Add(button1);
             Controls.Add(listView2);
             Controls.Add(listView1);
             Controls.Add(textBox2);
@@ -116,5 +128,6 @@
         private Label label1;
         private ListView listView1;
         private ListView listView2;
+        private Button button1;
     }
 }

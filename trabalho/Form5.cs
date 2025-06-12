@@ -12,7 +12,7 @@ namespace trabalho
 {
     public partial class FormCadastroP : System.Windows.Forms.Form
     {
-        private string caminhoArquivo = "C:/Users/thiag/Documents/csvProdutos";
+        private string csvCadastroProdutos = "C:/Users/thiag/Documents/csvProdutos";
         private int indiceEdicao = -1;
 
         public FormCadastroP()
@@ -28,9 +28,9 @@ namespace trabalho
         }
         private void InicializarArquivo()
         {
-            if (!File.Exists(caminhoArquivo))
+            if (!File.Exists(csvCadastroProdutos))
             {
-                File.WriteAllText(caminhoArquivo, "Nome,Preco,Descricao");
+                File.WriteAllText(csvCadastroProdutos, "Nome,Preco,Descricao");
             }
         }
 
@@ -46,7 +46,7 @@ namespace trabalho
                 return;
             }
 
-            var linhas = File.ReadAllLines(caminhoArquivo).ToList();
+            var linhas = File.ReadAllLines(csvCadastroProdutos).ToList();
 
             if (indiceEdicao == -1)
             {
@@ -59,7 +59,7 @@ namespace trabalho
                 btnCadastrar.Text = "Cadastrar";
             }
 
-            File.WriteAllLines(caminhoArquivo, linhas);
+            File.WriteAllLines(csvCadastroProdutos, linhas);
             MessageBox.Show("Produto salvo com sucesso!");
 
             txbProduto.Clear();
@@ -97,10 +97,10 @@ namespace trabalho
             }
 
             int linhaSelecionada = dgvProdutos.SelectedRows[0].Index;
-            var linhas = File.ReadAllLines(caminhoArquivo).ToList();
+            var linhas = File.ReadAllLines(csvCadastroProdutos).ToList();
 
             linhas.RemoveAt(linhaSelecionada + 1);
-            File.WriteAllLines(caminhoArquivo, linhas);
+            File.WriteAllLines(csvCadastroProdutos, linhas);
 
             CarregarCsvNoGrid();
             MessageBox.Show("Produto excluído com sucesso!");
@@ -110,7 +110,7 @@ namespace trabalho
             try
             {
                 DataTable tabela = new DataTable();
-                string[] linhas = File.ReadAllLines(caminhoArquivo);
+                string[] linhas = File.ReadAllLines(csvCadastroProdutos);
 
                 if (linhas.Length > 0)
                 {

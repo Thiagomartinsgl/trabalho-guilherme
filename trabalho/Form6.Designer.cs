@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txbCPF = new TextBox();
+            txbNome = new TextBox();
             label2 = new Label();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            comboBox1 = new ComboBox();
-            textBox5 = new TextBox();
+            txbTotal = new TextBox();
+            txbValor = new TextBox();
+            cbxProduto = new ComboBox();
+            txbQuantidade = new TextBox();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
-            dataGridView1 = new DataGridView();
             btnSalvar = new Button();
             btnExcluir = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            lbProdutos = new ListBox();
+            button1 = new Button();
             SuspendLayout();
             // 
             // label1
@@ -56,22 +56,22 @@
             label1.TabIndex = 0;
             label1.Text = "CPF";
             // 
-            // textBox1
+            // txbCPF
             // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(12, 33);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(233, 29);
-            textBox1.TabIndex = 1;
+            txbCPF.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txbCPF.Location = new Point(12, 33);
+            txbCPF.Name = "txbCPF";
+            txbCPF.Size = new Size(233, 29);
+            txbCPF.TabIndex = 1;
             // 
-            // textBox2
+            // txbNome
             // 
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(12, 103);
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.Size = new Size(233, 29);
-            textBox2.TabIndex = 3;
+            txbNome.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txbNome.Location = new Point(12, 103);
+            txbNome.Name = "txbNome";
+            txbNome.ReadOnly = true;
+            txbNome.Size = new Size(233, 29);
+            txbNome.TabIndex = 3;
             // 
             // label2
             // 
@@ -83,40 +83,42 @@
             label2.TabIndex = 2;
             label2.Text = "NOME";
             // 
-            // textBox3
+            // txbTotal
             // 
-            textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(12, 397);
-            textBox3.Name = "textBox3";
-            textBox3.ReadOnly = true;
-            textBox3.Size = new Size(233, 29);
-            textBox3.TabIndex = 4;
+            txbTotal.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txbTotal.Location = new Point(12, 397);
+            txbTotal.Name = "txbTotal";
+            txbTotal.ReadOnly = true;
+            txbTotal.Size = new Size(233, 29);
+            txbTotal.TabIndex = 4;
             // 
-            // textBox4
+            // txbValor
             // 
-            textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox4.Location = new Point(12, 316);
-            textBox4.Name = "textBox4";
-            textBox4.ReadOnly = true;
-            textBox4.Size = new Size(233, 29);
-            textBox4.TabIndex = 5;
+            txbValor.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txbValor.Location = new Point(12, 316);
+            txbValor.Name = "txbValor";
+            txbValor.ReadOnly = true;
+            txbValor.Size = new Size(233, 29);
+            txbValor.TabIndex = 5;
             // 
-            // comboBox1
+            // cbxProduto
             // 
-            comboBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(12, 179);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(233, 29);
-            comboBox1.TabIndex = 6;
+            cbxProduto.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbxProduto.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbxProduto.FormattingEnabled = true;
+            cbxProduto.Location = new Point(12, 179);
+            cbxProduto.Name = "cbxProduto";
+            cbxProduto.Size = new Size(233, 29);
+            cbxProduto.TabIndex = 6;
+            cbxProduto.SelectedIndexChanged += cbxProduto_SelectedIndexChanged;
             // 
-            // textBox5
+            // txbQuantidade
             // 
-            textBox5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox5.Location = new Point(12, 249);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(233, 29);
-            textBox5.TabIndex = 8;
+            txbQuantidade.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txbQuantidade.Location = new Point(12, 249);
+            txbQuantidade.Name = "txbQuantidade";
+            txbQuantidade.Size = new Size(233, 29);
+            txbQuantidade.TabIndex = 8;
             // 
             // label3
             // 
@@ -154,17 +156,9 @@
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.Location = new Point(12, 292);
             label6.Name = "label6";
-            label6.Size = new Size(61, 21);
+            label6.Size = new Size(141, 21);
             label6.TabIndex = 11;
-            label6.Text = "VALOR";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 432);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(233, 142);
-            dataGridView1.TabIndex = 12;
+            label6.Text = "VALOR UNITÁRIO";
             // 
             // btnSalvar
             // 
@@ -175,6 +169,7 @@
             btnSalvar.TabIndex = 13;
             btnSalvar.Text = "SALVAR";
             btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // btnExcluir
             // 
@@ -185,32 +180,53 @@
             btnExcluir.TabIndex = 14;
             btnExcluir.Text = "EXCLUIR";
             btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Click += btnExcluir_Click;
+            // 
+            // lbProdutos
+            // 
+            lbProdutos.FormattingEnabled = true;
+            lbProdutos.ItemHeight = 15;
+            lbProdutos.Location = new Point(12, 432);
+            lbProdutos.Name = "lbProdutos";
+            lbProdutos.Size = new Size(233, 154);
+            lbProdutos.TabIndex = 15;
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Location = new Point(261, 56);
+            button1.Name = "button1";
+            button1.Size = new Size(104, 44);
+            button1.TabIndex = 16;
+            button1.Text = "BUSCAR CLIENTE";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // FormCadastroPedidos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(257, 656);
+            ClientSize = new Size(377, 656);
+            Controls.Add(button1);
+            Controls.Add(lbProdutos);
             Controls.Add(btnExcluir);
             Controls.Add(btnSalvar);
-            Controls.Add(dataGridView1);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(textBox5);
+            Controls.Add(txbQuantidade);
             Controls.Add(label3);
-            Controls.Add(comboBox1);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
+            Controls.Add(cbxProduto);
+            Controls.Add(txbValor);
+            Controls.Add(txbTotal);
+            Controls.Add(txbNome);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(txbCPF);
             Controls.Add(label1);
             Name = "FormCadastroPedidos";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Cadastro Pedidos";
             Load += FormCadastroPedidos_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -218,19 +234,20 @@
         #endregion
 
         private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txbCPF;
+        private TextBox txbNome;
         private Label label2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private ComboBox comboBox1;
-        private TextBox textBox5;
+        private TextBox txbTotal;
+        private TextBox txbValor;
+        private ComboBox cbxProduto;
+        private TextBox txbQuantidade;
         private Label label3;
         private Label label4;
         private Label label5;
         private Label label6;
-        private DataGridView dataGridView1;
         private Button btnSalvar;
         private Button btnExcluir;
+        private ListBox lbProdutos;
+        private Button button1;
     }
 }
