@@ -38,41 +38,7 @@ namespace trabalho
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string nome = txbUsuario.Text.Trim();
-            string cpf = txbSenha.Text.Trim();
-
-            if (string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(cpf))
-            {
-                MessageBox.Show("Preencha todos os campos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            var linhas = File.ReadAllLines(csvUsuario).ToList();
-
-            if (indiceEdicao == -1)
-            {
-                if (linhas.Skip(1).Any(l => l.Split(',')[1] == cpf))
-                {
-                    MessageBox.Show("Este CPF já está cadastrado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                linhas.Add($"{nome},{cpf}");
-            }
-            else
-            {
-                linhas[indiceEdicao + 1] = $"{nome},{cpf}";
-                indiceEdicao = -1;
-                btnSalvar.Text = "Salvar";
-            }
-
-            File.WriteAllLines(csvUsuario, linhas);
-            MessageBox.Show("Dados salvos com sucesso!");
-
-            txbUsuario.Clear();
-            txbSenha.Clear();
-
-            CarregarCsvNoGrid();
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -119,14 +85,37 @@ namespace trabalho
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            string nome = txbUsuario.Text.Trim();
+            string senha = txbSenha.Text.Trim();
 
-        }
+            if (string.IsNullOrWhiteSpace(nome) || string.IsNullOrWhiteSpace(senha))
+            {
+                MessageBox.Show("Preencha todos os campos!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
+            var linhas = File.ReadAllLines(csvUsuario).ToList();
 
+            if (indiceEdicao == -1)
+            {
+                if (linhas.Skip(1).Any(l => l.Split(',')[1] == nome))
+                {
+                    MessageBox.Show("Este usuario já está cadastrado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                linhas.Add($"{nome},{senha}");
+            }
+
+            File.WriteAllLines(csvUsuario, linhas);
+            MessageBox.Show("Dados salvos com sucesso!");
+
+            txbUsuario.Clear();
+            txbSenha.Clear();
+
+            CarregarCsvNoGrid();
         }
     }
 }

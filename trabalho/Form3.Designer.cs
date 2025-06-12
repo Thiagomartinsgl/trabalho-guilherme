@@ -34,8 +34,8 @@
             txbSenha = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            button2 = new Button();
-            button3 = new Button();
+            btnEditar = new Button();
+            btnCadastrar = new Button();
             button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvUsuario).BeginInit();
             SuspendLayout();
@@ -95,27 +95,26 @@
             label2.TabIndex = 5;
             label2.Text = "Senha:";
             // 
-            // button2
+            // btnEditar
             // 
-            button2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(12, 517);
-            button2.Name = "button2";
-            button2.Size = new Size(135, 57);
-            button2.TabIndex = 6;
-            button2.Text = "EDITAR";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            btnEditar.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEditar.Location = new Point(12, 517);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(135, 57);
+            btnEditar.TabIndex = 6;
+            btnEditar.Text = "EDITAR";
+            btnEditar.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnCadastrar
             // 
-            button3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.Location = new Point(12, 182);
-            button3.Name = "button3";
-            button3.Size = new Size(135, 57);
-            button3.TabIndex = 7;
-            button3.Text = "CADASTRAR";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            btnCadastrar.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCadastrar.Location = new Point(12, 182);
+            btnCadastrar.Name = "btnCadastrar";
+            btnCadastrar.Size = new Size(135, 57);
+            btnCadastrar.TabIndex = 7;
+            btnCadastrar.Text = "CADASTRAR";
+            btnCadastrar.UseVisualStyleBackColor = true;
+            btnCadastrar.Click += btnCadastrar_Click;
             // 
             // button4
             // 
@@ -134,8 +133,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(435, 586);
             Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(btnCadastrar);
+            Controls.Add(btnEditar);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(txbSenha);
@@ -159,8 +158,8 @@
         private TextBox txbSenha;
         private Label label1;
         private Label label2;
-        private Button button2;
-        private Button button3;
+        private Button btnEditar;
+        private Button btnCadastrar;
         private Button button4;
     }
 }
