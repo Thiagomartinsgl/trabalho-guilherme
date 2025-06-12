@@ -128,7 +128,7 @@
             // btnExcluir
             // 
             btnExcluir.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            btnExcluir.Location = new Point(637, 273);
+            btnExcluir.Location = new Point(670, 273);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(118, 56);
             btnExcluir.TabIndex = 9;
