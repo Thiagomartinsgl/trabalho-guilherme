@@ -14,16 +14,44 @@ namespace trabalho
     {
         private string csvUsuario = "C:/Users/thiag/Documents/csvLogin";
         private int indiceEdicao = -1;
+        private string usuarioLogado;
 
-        public FormCadastroU()
+        public FormCadastroU(string usuario)
         {
             InitializeComponent();
             InicializarCsvSeNecessario();
+            usuarioLogado = usuario;
         }
 
         private void FormCadastroU_Load(object sender, EventArgs e)
         {
+            if (usuarioLogado != "ADMIN")
+            {
+                dgvUsuario.Visible = true;
+                label1.Visible = true;
+                btnSalvar.Visible = true;
+                lblUsuario.Visible = false;
+                lblSenha.Visible = false;
+                txbUsuario.Visible = false;
+                txbSenha.Visible = false;
+                btnCadastrar.Visible = false;
+                btnExcluir.Visible = false;
+            }
+            else
+            {
+                lblUsuario.Visible = true;
+                lblSenha.Visible = true;
+                txbUsuario.Visible = true;
+                txbSenha.Visible = true;
+                btnCadastrar.Visible = true;
+                btnExcluir.Visible = true;
+                dgvUsuario.Visible = true;
+                label1.Visible = false;
+                btnSalvar.Visible = false;
+            }
 
+            CarregarCsvNoGrid();
+            dgvUsuario.Columns[0].ReadOnly = true;
         }
         private void InicializarCsvSeNecessario()
         {
@@ -34,11 +62,6 @@ namespace trabalho
                     sw.WriteLine("Usuario,Senha");
                 }
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -72,7 +95,11 @@ namespace trabalho
                     for (int i = 1; i < linhas.Length; i++)
                     {
                         string[] dados = linhas[i].Split(',');
-                        tabela.Rows.Add(dados);
+
+                        if (usuarioLogado == "ADMIN" || dados[0] == usuarioLogado)
+                        {
+                            tabela.Rows.Add(dados);
+                        }
                     }
                 }
 
@@ -116,6 +143,35 @@ namespace trabalho
             txbSenha.Clear();
 
             CarregarCsvNoGrid();
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var linhas = new List<string> { "Usuario,Senha" };
+
+                foreach (DataGridViewRow row in dgvUsuario.Rows)
+                {
+                    if (row.IsNewRow) continue;
+
+                    string usuario = row.Cells[0].Value?.ToString() ?? "";
+                    string senha = row.Cells[1].Value?.ToString() ?? "";
+
+                    if (!string.IsNullOrWhiteSpace(usuario) && !string.IsNullOrWhiteSpace(senha))
+                    {
+                        linhas.Add($"{usuario},{senha}");
+                    }
+                }
+
+                File.WriteAllLines(csvUsuario, linhas);
+                MessageBox.Show("Alterações salvas com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                CarregarCsvNoGrid();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao salvar as alterações: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -35,7 +35,7 @@ namespace trabalho
 
             if (usuario == "ADMIN" && senha == "123")
             {
-                AbrirFormularioPrincipal();
+                AbrirFormularioPrincipal(usuario);
                 return;
 
             }
@@ -49,7 +49,7 @@ namespace trabalho
                     var dados = linha.Split(',');
                     if (dados.Length == 2 && dados[0] == usuario && dados[1] == senha)
                     {
-                        AbrirFormularioPrincipal();
+                        AbrirFormularioPrincipal(usuario);
                         return;
                     }
                 }
@@ -57,10 +57,10 @@ namespace trabalho
 
             MessageBox.Show("Usuário ou senha inválidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-        private void AbrirFormularioPrincipal()
+        private void AbrirFormularioPrincipal(string usuario)
         {
             this.Hide();
-            FormPrincipal principal = new FormPrincipal();
+            FormPrincipal principal = new FormPrincipal(usuario);
             principal.Show();
         }
     }

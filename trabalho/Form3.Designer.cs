@@ -32,24 +32,24 @@
             txbUsuario = new TextBox();
             dgvUsuario = new DataGridView();
             txbSenha = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            btnEditar = new Button();
+            lblUsuario = new Label();
+            lblSenha = new Label();
             btnCadastrar = new Button();
-            button4 = new Button();
+            btnExcluir = new Button();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvUsuario).BeginInit();
             SuspendLayout();
             // 
             // btnSalvar
             // 
             btnSalvar.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSalvar.Location = new Point(288, 517);
+            btnSalvar.Location = new Point(145, 526);
             btnSalvar.Name = "btnSalvar";
             btnSalvar.Size = new Size(135, 57);
             btnSalvar.TabIndex = 0;
             btnSalvar.Text = "SALVAR";
             btnSalvar.UseVisualStyleBackColor = true;
-            btnSalvar.Click += button1_Click;
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // txbUsuario
             // 
@@ -75,35 +75,25 @@
             txbSenha.Size = new Size(411, 29);
             txbSenha.TabIndex = 3;
             // 
-            // label1
+            // lblUsuario
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(12, 17);
-            label1.Name = "label1";
-            label1.Size = new Size(73, 21);
-            label1.TabIndex = 4;
-            label1.Text = "Usuário:";
+            lblUsuario.AutoSize = true;
+            lblUsuario.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblUsuario.Location = new Point(12, 17);
+            lblUsuario.Name = "lblUsuario";
+            lblUsuario.Size = new Size(73, 21);
+            lblUsuario.TabIndex = 4;
+            lblUsuario.Text = "Usuário:";
             // 
-            // label2
+            // lblSenha
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(12, 91);
-            label2.Name = "label2";
-            label2.Size = new Size(61, 21);
-            label2.TabIndex = 5;
-            label2.Text = "Senha:";
-            // 
-            // btnEditar
-            // 
-            btnEditar.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEditar.Location = new Point(12, 517);
-            btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(135, 57);
-            btnEditar.TabIndex = 6;
-            btnEditar.Text = "EDITAR";
-            btnEditar.UseVisualStyleBackColor = true;
+            lblSenha.AutoSize = true;
+            lblSenha.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSenha.Location = new Point(12, 91);
+            lblSenha.Name = "lblSenha";
+            lblSenha.Size = new Size(61, 21);
+            lblSenha.TabIndex = 5;
+            lblSenha.Text = "Senha:";
             // 
             // btnCadastrar
             // 
@@ -116,27 +106,37 @@
             btnCadastrar.UseVisualStyleBackColor = true;
             btnCadastrar.Click += btnCadastrar_Click;
             // 
-            // button4
+            // btnExcluir
             // 
-            button4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.Location = new Point(288, 182);
-            button4.Name = "button4";
-            button4.Size = new Size(135, 57);
-            button4.TabIndex = 8;
-            button4.Text = "EXCLUIR";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            btnExcluir.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnExcluir.Location = new Point(288, 182);
+            btnExcluir.Name = "btnExcluir";
+            btnExcluir.Size = new Size(135, 57);
+            btnExcluir.TabIndex = 8;
+            btnExcluir.Text = "EXCLUIR";
+            btnExcluir.UseVisualStyleBackColor = true;
+            btnExcluir.Click += button4_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(12, 251);
+            label1.Name = "label1";
+            label1.Size = new Size(309, 21);
+            label1.TabIndex = 9;
+            label1.Text = "Dê 2 cliques na sua senha para edita-la:";
             // 
             // FormCadastroU
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(435, 586);
-            Controls.Add(button4);
-            Controls.Add(btnCadastrar);
-            Controls.Add(btnEditar);
-            Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(btnExcluir);
+            Controls.Add(btnCadastrar);
+            Controls.Add(lblSenha);
+            Controls.Add(lblUsuario);
             Controls.Add(txbSenha);
             Controls.Add(dgvUsuario);
             Controls.Add(txbUsuario);
@@ -156,10 +156,10 @@
         private TextBox txbUsuario;
         private DataGridView dgvUsuario;
         private TextBox txbSenha;
-        private Label label1;
-        private Label label2;
-        private Button btnEditar;
+        private Label lblUsuario;
+        private Label lblSenha;
         private Button btnCadastrar;
-        private Button button4;
+        private Button btnExcluir;
+        private Label label1;
     }
 }

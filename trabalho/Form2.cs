@@ -12,9 +12,12 @@ namespace trabalho
 {
     public partial class FormPrincipal : System.Windows.Forms.Form
     {
-        public FormPrincipal()
+        private string usuarioLogado;
+
+        public FormPrincipal(string usuario)
         {
             InitializeComponent();
+            usuarioLogado = usuario;
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
@@ -42,7 +45,7 @@ namespace trabalho
 
         private void button4_Click(object sender, EventArgs e)
         {
-            FormCadastroU formUsuarios = new FormCadastroU();
+            FormCadastroU formUsuarios = new FormCadastroU(usuarioLogado);
             formUsuarios.ShowDialog();
         }
     }

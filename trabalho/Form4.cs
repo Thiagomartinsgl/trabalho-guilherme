@@ -158,7 +158,6 @@ namespace trabalho
             {
                 linhas[indiceEdicao + 1] = $"{nome},{cpf},{telefone},{endereco},{Email},{CEP},{Numero},{Bairro},{Cidade},{Estado},{Whatsapp}";
                 indiceEdicao = -1;
-                btnSalvar.Text = "Salvar";
             }
 
             File.WriteAllLines(csvClientes, linhas);
